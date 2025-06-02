@@ -141,11 +141,11 @@ clf = joblib.load('best_sentiment_model.pkl')
 le = joblib.load('label_encoder.pkl')
 vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
-while True:
-    review = input("\nEnter a review to classify (or type 'exit' to quit): ")
-    if review.lower() == 'exit':
-        break
-    review_clean = preprocess_for_prediction(review)
-    review_vec = vectorizer.transform([review_clean])
-    prediction = clf.predict(review_vec)
-    print("Predicted Sentiment:", le.inverse_transform(prediction)[0])
+# while True:
+#     review = input("\nEnter a review to classify (or type 'exit' to quit): ")
+#     if review.lower() == 'exit':
+#         break
+#     review_clean = preprocess_for_prediction(review)
+#     review_vec = vectorizer.transform([review_clean])
+#     prediction = clf.predict(review_vec)
+#     print("Predicted Sentiment:", le.inverse_transform(prediction)[0])
